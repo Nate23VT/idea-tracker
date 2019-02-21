@@ -1,0 +1,17 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+
+.submitForm {
+	width: 100%;
+}
+
+.validation{
+	padding-top: 5px;
+	display: none;
+	color: red;
+}
+
+.input-error {
+  display: block;
+}
