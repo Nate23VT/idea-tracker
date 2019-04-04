@@ -1,0 +1,39 @@
+<md-tabs class="md-primary" md-center-tabs>
+        <md-tab label="Prioritization">
+            <md-content class="md-padding">
+            <h2 class="md-display-1">Prioritization</h2>
+            <p class="md-body-1">
+                    <md-list-item class="md-3-line" ng-repeat="item in formContent" ng-click="null">
+                        <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ item.title }}</h3>
+                            <h4>{{ item.name }}</h4>
+                            <p>{{ item.weight }}</p>
+                        </div>
+                    </md-list-item>
+            </p>
+            </md-content>
+        </md-tab>
+        <md-tab label="Lab Testing">
+            <md-content class="md-padding">
+            <h2 class="md-display-1">Lab Testing</h2>
+            <p class="md-body-1">
+                Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa
+                orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in
+                condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim,
+                at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus.
+            </p>
+            </md-content>
+        </md-tab>
+        <md-tab label="Field Testing">
+            <md-content class="md-padding">
+            <h2 class="md-display-1">Field Testing</h2>
+            <p class="md-body-1">
+                Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur
+                posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse
+                vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci
+                commodo volutpat non ac est.
+            </p>
+            </md-content>
+        </md-tab>
+    </md-tabs>
