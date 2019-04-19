@@ -1,28 +1,28 @@
 [
       {
           "title":"Big Data",
-          "icon":"img/big-data.png",
+          "icon":"assets/img/big-data.png",
           "link":"#/submit/Big Data",
           "background": "darkBlue",
           "span": { "row": 1, "col": 1 }
       },
       {
         "title":"Extended Reality",
-        "icon":"img/iot.png",
+        "icon":"assets/img/iot.png",
         "link":"#/submit/XR",
         "background": "yellow",
         "span": { "row": 1, "col": 1 }
       },
       {
         "title":"Collaboration",
-        "icon":"img/collab.png",
+        "icon":"assets/img/collab.png",
         "link":"#/submit/collab",
         "background": "deepBlue",
         "span": { "row": 1, "col": 1 }
       },
       {
         "title":"RPA",
-        "icon":"img/rpa.png",
+        "icon":"assets/img/rpa.png",
         "link":"#/submit/RPA",
         "background": "pink",
         "span": { "row": 2, "col": 2 }
