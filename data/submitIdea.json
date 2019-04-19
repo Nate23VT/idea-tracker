@@ -1,0 +1,181 @@
+{
+    "common": [
+    {
+        "sectionName":"Let's Get Started",
+        "content": [
+        {
+            "ID":10,
+            "fieldName":"Name",
+            "fieldDesc":"",
+            "config": {
+                "orderNum": 10,
+                "fieldType":"text",
+                "isRequired":"Y"
+            }
+        },
+        {
+            "ID":20,
+            "fieldName":"Owner",
+            "fieldDesc":"",
+            "config": {
+                "orderNum": 20,
+                "fieldType":"text",
+                "isRequired":"Y"
+            }
+        },
+        {
+            "ID":20,
+            "fieldName":"Technology",
+            "fieldDesc":"",
+            "config": {
+                "orderNum": 25,
+                "fieldType":"dropdown",
+                "option": [
+                    {
+                        "name":"RPA",
+                        "value":"RPA"
+                    },
+                    {
+                        "name":"Big Data",
+                        "value":"Big Data"
+                    },
+                    {
+                        "name":"I am not sure",
+                        "value":"TBD"
+                    }
+                ],
+                "isRequired":"Y"
+            }
+        },
+        {
+            "ID":30,
+            "fieldName":"Description",
+            "fieldDesc":"",
+            "config": {
+                "orderNum": 20,
+                "fieldType":"textarea",
+                "isRequired":"N"
+            }
+        },
+        {
+            "ID":40,
+            "fieldName":"Source",
+            "fieldDesc":"",
+            "config": {
+                "orderNum": 20,
+                "fieldType":"dropdown",
+                "option": [
+                    {
+                        "name":"Meeting",
+                        "value":"meeting"
+                    },
+                    {
+                        "name":"Roadshow",
+                        "value":"roadshow"
+                    }
+                ],
+                "isRequired":"Y"
+            }
+        }]
+    }
+    ],
+    "custom":[
+    {
+        "name": "RPA",
+        "fields": [
+        {
+            "sectionName":"Additional RPA Information",
+            "content": [
+            {
+                "ID":40,
+                "fieldName":"Problem Statement",
+                "fieldDesc":"Explain the pain points in the process",
+                "config": {
+                    "orderNum": 10,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Measurable Benefits",
+                "fieldDesc":"What are the measurable benefits expected if this process was automated?",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Frequency of Human Errors",
+                "fieldDesc":"If applicable/known",
+                "config": {
+                    "orderNum": 30,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Applications",
+                "fieldDesc":"List all applicatinos used to complete the process",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Number of FTEs",
+                "fieldDesc":"How many full time employees currently handle this process?",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Average Volume (day/month/year)",
+                "fieldDesc":"",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Average handling time per case (hours)",
+                "fieldDesc":"",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Key Steps",
+                "fieldDesc":"Briefly list down the key steps involved in the process",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"Process Exceptions",
+                "fieldDesc":"List any exceptions and frequency of those exceptions if your process does not always follow the same steps.",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"% Rule based vs Human Judgement",
+                "fieldDesc":"Is the process 100% rule based or does it require human judgement at any steps?",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            }]
+        }]
+    }]
+}

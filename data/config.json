@@ -1,0 +1,7 @@
+{
+    "pageTitle":"Submit Your Idea",
+    "dataURLs": {
+        "tilesDataURL":"data/main.txt",
+        "submitIdeaDataURL":"data/submitIdea.txt"
+    }
+}

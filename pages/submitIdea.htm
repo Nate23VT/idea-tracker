@@ -1,0 +1,53 @@
+<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center" ngController="techCtrl">
+    <div flex-xs flex-gt-xs="65" layout-align="center center">
+    <form name="submitForm" id="submitForm" class="submitForm form-validation" role="form">
+        <md-card class="card-40-center" ng-repeat="s in form.common">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{s.sectionName}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content ng-repeat="c in s.content">
+                <md-input-container class="md-block" flex-gt-xs ng-if="c.config.fieldType == 'text'">
+                    <label>{{c.fieldName}}</label>
+                    <input required>
+                </md-input-container>
+                <md-select ng-model="formParams.technology" placeholder="{{c.fieldName}}" ng-if="c.config.fieldType == 'dropdown'">
+                    <md-option ng-repeat="ddl in c.option" ng-value="ddl.value">
+                        {{ddl.name}}
+                    </md-option>
+                </md-select>
+                <md-input-container class="md-block" ng-if="c.config.fieldType == 'textbox'">
+                    <label>{{c.fieldName}}</label>
+                    <textarea md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                </md-input-container>
+            </md-card-content>
+        </md-card>
+        <md-card class="card-40-center" md-theme-watch ng-repeat="c in form.custom | filter:{name: tech}:true">
+            <span ng-repeat="c2 in c.fields">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{c2.sectionName}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content ng-repeat="c3 in c2.content">
+                    <md-input-container class="md-block" flex-gt-xs ng-if="c3.config.fieldType == 'text'">
+                        <label>{{c3.fieldName}}</label>
+                        <input required>
+                        <div class="hint">{{c3.fieldDesc}}</div>
+                    </md-input-container>
+                    <md-select ng-model="formParams.technology" placeholder="{{c3.fieldName}}" ng-if="c3.config.fieldType == 'dropdown'">
+                        <md-option ng-repeat="ddl in c3.config.option" ng-value="ddl.value">
+                            {{ddl.name}}
+                        </md-option>
+                    </md-select>
+                    <md-input-container class="md-block" ng-if="c3.config.fieldType == 'textarea'">
+                        <label>{{c3.fieldName}}</label>
+                        <textarea md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                    </md-input-container>
+                </md-card-content>
+            </span>
+        </md-card>
+    </form>
+    </div>
+</md-content>
