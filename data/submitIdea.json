@@ -6,6 +6,7 @@
         {
             "ID":10,
             "fieldName":"Name",
+            "internalName":"name",
             "fieldDesc":"",
             "config": {
                 "orderNum": 10,
@@ -16,6 +17,7 @@
         {
             "ID":20,
             "fieldName":"Owner",
+            "internalName":"owner",
             "fieldDesc":"",
             "config": {
                 "orderNum": 20,
@@ -24,42 +26,20 @@
             }
         },
         {
-            "ID":20,
-            "fieldName":"Technology",
-            "fieldDesc":"",
-            "config": {
-                "orderNum": 25,
-                "fieldType":"dropdown",
-                "option": [
-                    {
-                        "name":"RPA",
-                        "value":"RPA"
-                    },
-                    {
-                        "name":"Big Data",
-                        "value":"Big Data"
-                    },
-                    {
-                        "name":"I am not sure",
-                        "value":"TBD"
-                    }
-                ],
-                "isRequired":"Y"
-            }
-        },
-        {
             "ID":30,
             "fieldName":"Description",
+            "internalName":"description",
             "fieldDesc":"",
             "config": {
                 "orderNum": 20,
-                "fieldType":"textarea",
+                "fieldType":"text",
                 "isRequired":"N"
             }
         },
         {
             "ID":40,
             "fieldName":"Source",
+            "internalName":"source",
             "fieldDesc":"",
             "config": {
                 "orderNum": 20,
@@ -81,15 +61,16 @@
     ],
     "custom":[
     {
-        "name": "RPA",
+        "name": "Robotic Process Automation",
         "fields": [
         {
             "sectionName":"Additional RPA Information",
             "content": [
             {
                 "ID":40,
-                "fieldName":"Problem Statement",
-                "fieldDesc":"Explain the pain points in the process",
+                "fieldName":"What are the pain points in the current process?",
+                "internalName":"rpaPainPoints",
+                "fieldDesc":"",
                 "config": {
                     "orderNum": 10,
                     "fieldType":"text"
@@ -97,8 +78,9 @@
             },
             {
                 "ID":40,
-                "fieldName":"Measurable Benefits",
-                "fieldDesc":"What are the measurable benefits expected if this process was automated?",
+                "fieldName":"What are the measurable benefits expected if this process was automated?",
+                "internalName":"rpaMeasBenefits",
+                "fieldDesc":"",
                 "config": {
                     "orderNum": 20,
                     "fieldType":"text"
@@ -106,8 +88,9 @@
             },
             {
                 "ID":40,
-                "fieldName":"Frequency of Human Errors",
-                "fieldDesc":"If applicable/known",
+                "fieldName":"What is the frequency of human error in the process?",
+                "internalName":"rpaErrorFreq",
+                "fieldDesc":"",
                 "config": {
                     "orderNum": 30,
                     "fieldType":"text"
@@ -115,25 +98,8 @@
             },
             {
                 "ID":40,
-                "fieldName":"Applications",
-                "fieldDesc":"List all applicatinos used to complete the process",
-                "config": {
-                    "orderNum": 20,
-                    "fieldType":"text"
-                }
-            },
-            {
-                "ID":40,
-                "fieldName":"Number of FTEs",
-                "fieldDesc":"How many full time employees currently handle this process?",
-                "config": {
-                    "orderNum": 20,
-                    "fieldType":"text"
-                }
-            },
-            {
-                "ID":40,
-                "fieldName":"Average Volume (day/month/year)",
+                "fieldName":"What applications are used to complete the process?",
+                "internalName":"rpaApps",
                 "fieldDesc":"",
                 "config": {
                     "orderNum": 20,
@@ -142,7 +108,8 @@
             },
             {
                 "ID":40,
-                "fieldName":"Average handling time per case (hours)",
+                "fieldName":"How many full time employees currently handle this process?",
+                "internalName":"rpaFTE",
                 "fieldDesc":"",
                 "config": {
                     "orderNum": 20,
@@ -151,8 +118,9 @@
             },
             {
                 "ID":40,
-                "fieldName":"Key Steps",
-                "fieldDesc":"Briefly list down the key steps involved in the process",
+                "fieldName":"What is the average volume (day/month/year)?",
+                "internalName":"rpaVolume",
+                "fieldDesc":"",
                 "config": {
                     "orderNum": 20,
                     "fieldType":"text"
@@ -160,8 +128,9 @@
             },
             {
                 "ID":40,
-                "fieldName":"Process Exceptions",
-                "fieldDesc":"List any exceptions and frequency of those exceptions if your process does not always follow the same steps.",
+                "fieldName":"What is the average handling time per case (in hours)?",
+                "internalName":"rpaHandling",
+                "fieldDesc":"",
                 "config": {
                     "orderNum": 20,
                     "fieldType":"text"
@@ -169,8 +138,19 @@
             },
             {
                 "ID":40,
-                "fieldName":"% Rule based vs Human Judgement",
-                "fieldDesc":"Is the process 100% rule based or does it require human judgement at any steps?",
+                "fieldName":"Briefly list down the key steps involved in the process",
+                "internalName":"rpaSteps",
+                "fieldDesc":"",
+                "config": {
+                    "orderNum": 20,
+                    "fieldType":"text"
+                }
+            },
+            {
+                "ID":40,
+                "fieldName":"What are the exceptions to the process?",
+                "internalName":"rpaExceptions",
+                "fieldDesc":"Be sure to include frequency of exceptions",
                 "config": {
                     "orderNum": 20,
                     "fieldType":"text"

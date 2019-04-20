@@ -17,7 +17,7 @@ var myApp = angular
 });
 
 myApp.controller('mainCtrl',function($scope, $http) {
-  let url = "data/main.json";
+  let url = "data/tech.json";
   
   $http.get(url).then(
     function successCallback(response) {
@@ -30,12 +30,38 @@ myApp.controller('mainCtrl',function($scope, $http) {
 });
 
 myApp.controller('submitCtrl',function($scope, $http, $routeParams) {
+  $scope.data ={};
+  $scope.techData ={};
+  $scope.data.tech = $routeParams.technology;
   $scope.tech = $routeParams.technology;
   let url = "data/submitIdea.json";
-  
+  let techUrl = "data/tech.json";
+
+  $scope.submit = function() {
+    console.log($scope.data)
+    console.log($scope.techData)
+  };
+
+  $scope.reset = function() {
+    var cont = confirm("Are you sure you want to clear the form?");   //todo - make pretty
+    if (cont) {
+      $scope.data = null;
+      $scope.techData = null;
+    }
+  };
+
   $http.get(url).then(
     function successCallback(response) {
       $scope.form = response.data;
+
+      $http.get(techUrl).then(
+        function successCallback(response) {
+          $scope.techInfo = _.where(response.data, {title: $scope.tech})[0].content;
+        }, 
+        function errorCallback(response) {
+        //todo handle error
+        }
+      );
     }, 
     function errorCallback(response) {
     //todo handle error

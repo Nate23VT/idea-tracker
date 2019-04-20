@@ -1,0 +1,29 @@
+[
+      {
+          "title":"Big Data",
+          "image":"assets/img/big-data.jpg",
+          "link":"#/submit/Big Data"
+      },
+      {
+        "title":"Extended Reality",
+        "image":"assets/img/vr.jpg",
+        "link":"#/submit/XR"
+      },
+      {
+        "title":"Internet of Things",
+        "image":"assets/img/iot.jpg",
+        "link":"#/submit/collab"
+      },
+      {
+        "title":"Robotic Process Automation",
+        "image":"assets/img/automation.jpg",
+        "link":"#/submit/Robotic Process Automation",
+        "content": [
+          {
+            "title": "What is RPA?",
+            "image": "assets/img/automation.jpg",
+            "text": "Robotic process automation (or RPA) is an emerging form of business process automation technology based on the notion of software robots or artificial intelligence (AI) workers.\n\nRPA systems develop the action list by watching the user perform that task in the application's graphical user interface (GUI), and then perform the automation by repeating those tasks directly in the GUI."
+          }
+        ]
+      }
+  ]
