@@ -12,9 +12,9 @@
                         <md-input-container class="md-block lessMargin" ng-if="c.config.fieldType == 'text'">
                             <label>{{c.fieldName}}</label>
                             <div class="hint">{{c.fieldDesc}}</div>
-                            <textarea md-select-on-focus ng-model="data[c.internalName]"></textarea>
+                            <textarea md-select-on-focus ng-model="data[c.internalName]" ng-required="isRequired(c.config.isRequired)"></textarea>
                         </md-input-container>
-                        <md-select class="selectMargin" ng-model="data[c.internalName]" placeholder="{{c.fieldName}}" ng-if="c.config.fieldType == 'dropdown'">
+                        <md-select class="selectMargin" ng-model="data[c.internalName]" placeholder="{{c.fieldName}}" ng-if="c.config.fieldType == 'dropdown'" ng-required="isRequired(c.config.isRequired)">
                             <div class="hint">{{c.fieldDesc}}</div>
                             <md-option ng-repeat="ddl in c.option" ng-value="ddl.value">
                                 {{ddl.name}}
@@ -34,9 +34,9 @@
                         <md-input-container class="md-block lessMargin" ng-if="c3.config.fieldType == 'text'">
                             <label>{{c3.fieldName}}</label>
                             <div class="hint">{{c3.fieldDesc}}</div>
-                            <textarea md-select-on-focus ng-model="techData[c3.internalName]"></textarea>
+                            <textarea md-select-on-focus ng-model="techData[c3.internalName]" ng-required="isRequired(c3.config.isRequired)"></textarea>
                         </md-input-container>
-                        <md-select class="selectMargin" ng-model="techData[c3.internalName]" placeholder="{{c3.fieldName}}" ng-if="c3.config.fieldType == 'dropdown'">
+                        <md-select class="selectMargin" ng-model="techData[c3.internalName]" placeholder="{{c3.fieldName}}" ng-if="c3.config.fieldType == 'dropdown'" ng-required="isRequired(c3.config.isRequired)"">
                             <div class="hint">{{c3.fieldDesc}}</div>
                             <md-option ng-repeat="ddl in c3.config.option" ng-value="ddl.value">
                                 {{ddl.name}}

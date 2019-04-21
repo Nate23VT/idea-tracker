@@ -50,6 +50,14 @@ myApp.controller('submitCtrl',function($scope, $http, $routeParams) {
     }
   };
 
+  $scope.isRequired = function(isRequired) {
+    if (isRequired == 'Y') {
+      return true;
+    } else {
+      return false
+    }
+  };
+
   $http.get(url).then(
     function successCallback(response) {
       $scope.form = response.data;
