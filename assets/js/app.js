@@ -38,8 +38,30 @@ myApp.controller('submitCtrl',function($scope, $http, $routeParams) {
   let techUrl = "data/tech.json";
 
   $scope.submit = function() {
+    var result = [];
     console.log($scope.data)
+    var scopeData = $.map($scope.data , function (value, key) {
+        return [[key, value]];
+    });
     console.log($scope.techData)
+    var techData = $.map($scope.techData , function (value, key) {
+      return [[key, value]];
+    });
+    result.push(scopeData);
+    result.push(techData);
+    console.log($scope.techData)
+    /*
+    $().SPServices({
+      operation: "UpdateListItems",
+      async: false,
+      batchCmd: "New",
+      listName: "Feedback",
+      valuepairs: result,
+      completefunc: function(xData, Status) {
+        alert("completed");
+      }
+    });
+    */
   };
 
   $scope.reset = function() {
